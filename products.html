@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h2>Here is a list of pets</h2>
+
+  <div class="pets"></div>
+
+  <script>
+    console.log('here is the pets page');
+
+var pets = [
+  {id: 1, name: "Quimby", type: "cat"},
+  {id: 2, name: "Bixby", type: "cat"},
+  {id:3, name: "Chessie", type: "dog"},
+  {id:4, name: "Rikki", type: "ferret"}
+];
+
+console.log(pets);
+var petsHTML = "";
+pets.forEach(function(pet) {
+  petsHTML += "<h2>" + pet.name + "</h2>" + "<p>" + pet.type + "</p>";
+});
+var petsDiv = document.querySelector('.pets');
+petsDiv.innerHTML = petsHTML;
+console.log(petsHTML);
+  </script>
+</body>
+</html>
